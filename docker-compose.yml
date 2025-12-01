@@ -1,6 +1,6 @@
 services:
   mysqldb:
-    image: school-images
+    image: xyz
     restart: unless-stopped
     environment:
       - MYSQL_ROOT_PASSWORD=root
@@ -11,8 +11,8 @@ services:
       - db:/var/lib/mysql
   app-backend:
     depends_on:
-      - mysqldb
-    image: mouradhassini/school-devops:1.0.0
+      -xyz
+    image: nouransiri/school-image:1.0.0
     #build : ./
     restart: on-failure
     ports:
